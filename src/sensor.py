@@ -5,6 +5,7 @@ from flask.ext import restful
 from pymongo.errors import OperationFailure
 from flask_pymongo import PyMongo
 from functools import wraps
+from bson.json_util import dumps
 
 app = Flask(__name__, template_folder='../templates', static_folder='../static')
 api = restful.Api(app)
@@ -35,11 +36,14 @@ def index():
 
 
 class Point(restful.Resource):
-    @prepare_response
     def post(self):
         print request.json
         uuid = mongo.db.points.insert(request.json)
-        return mongo.db.points.find_one_or_404({'_id': uuid})
+        return mongo.db.points.find_one_or_404({'_id': uuid}, {'_id': False})
+    
+    @prepare_response
+    def get(self):
+        return list(mongo.db.points.find({}, {'_id': False}))
 
 api.add_resource(Point, '/points/')
 
