@@ -1,0 +1,20 @@
+{
+  "name": "Implementation-PaaS-Reference-Implementation-of-a-pseudonymity-based-eHealth-cloud-system",
+  "version": "0.0.1",
+  "homepage": "https://github.com/TooAngel/Implementation-PaaS-Reference-Implementation-of-a-pseudonymity-based-eHealth-cloud-system",
+  "authors": [
+    "Tobias Wilken <tooangel@tooangel.de>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+  }
+}

@@ -1,0 +1,9 @@
+Flask
+Flask-Sockets
+Gunicorn
+nose
+Flask-PyMongo
+Flask-SSLify
+Flask-RESTful
+jsonschema
+pep8

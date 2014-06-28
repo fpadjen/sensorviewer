@@ -1,0 +1,31 @@
+{
+  "name": "prioapbecs",
+  "homepage": "https://prioapbecs.cloudcontrolled.com/",
+  "author": "Tobias Wilken <tooangel@tooangel.de>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TooAngel/Implementation-PaaS-Reference-Implementation-of-a-pseudonymity-based-eHealth-cloud-system"
+  },
+  "dependencies": {},
+  "description": "prioapbecs prioapbecs =========================================================================================",
+  "bugs": {
+    "url": "https://github.com/TooAngel/Implementation-PaaS-Reference-Implementation-of-a-pseudonymity-based-eHealth-cloud-system/issues"
+  },
+  "version": "0.0.1",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-html": "~1.3.0",
+    "grunt-contrib-csslint": "~0.2.0",
+    "grunt": "~0.4.5",
+    "grunt-nose": "~0.4.0",
+    "grunt-jsonlint": "^1.0.4",
+    "grunt-flake8": "^0.1.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
