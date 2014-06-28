@@ -15,7 +15,7 @@ controllers.controller('SensorCtrl', ['$scope', 'Point', '$http', function($scop
 				tickRenderer: $.jqplot.CanvasAxisTickRenderer,
 				tickOptions : {
 					formatString : '%Y-%m-%d',
-					angle : 15
+					angle : 15,
 					fontSize : '10pt'
 				},
 			},
