@@ -43,7 +43,11 @@ class Point(restful.Resource):
     
     @prepare_response
     def get(self):
-        return list(mongo.db.points.find({}, {'_id': False}))
+        data = [[]]
+        items = mongo.db.points.find({}, {'_id': False})
+        for item in items:
+            data[0].append([item['date']  * 1000., item['measure']])
+        return data
 
 api.add_resource(Point, '/points/')
 

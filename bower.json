@@ -16,5 +16,9 @@
   ],
   "dependencies": {
     "bootstrap": "~3.1.1",
+    "jquery-ui": "~1.11.0",
+    "jqplot": "*",
+    "angular-ui-chart": "~0.0.1",
+    "angular-resource": "~1.2.18"
   }
 }

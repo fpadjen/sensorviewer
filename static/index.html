@@ -1,88 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="prioapbecs">
+<html lang="en" data-ng-app="myApp">
 <head>
 <meta charset="utf-8">
 <title>prioapbecs</title>
 <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
-<link rel="stylesheet" href="/bower_components/jquery-ui/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/bower_components/jquery-ui/themes/flick/jquery-ui.css">
 
 <script src="/bower_components/jquery/dist/jquery.js"></script>
 <script src="/bower_components/jqplot/jquery.jqplot.js"></script>
-<script src="/bower_components/jquery-ui/ui/jquery-ui.js"></script>
+<script src="/bower_components/jquery-ui/jquery-ui.js"></script>
 <script src="/bower_components/jqplot/plugins/jqplot.dateAxisRenderer.js"></script>
 <script src="/bower_components/angular/angular.js"></script>
-<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-<script src="/bower_components/angular-route/angular-route.js"></script>
 <script src="/bower_components/angular-ui-chart/src/chart.js"></script>
-<script src="/bower_components/angular-ui-autocomplete/autocomplete.js"></script>
 <script src="/bower_components/angular-resource/angular-resource.js"></script>
-<script src="/bower_components/angular-local-storage/angular-local-storage.js"></script>
-<script src="/bower_components/jsbn/jsbn.js"></script>
-<script src="/bower_components/jsbn/jsbn2.js"></script>
-<script src="/bower_components/CryptoJS/build/rollups/hmac-md5.js"></script>
-<script src="/bower_components/CryptoJS/build/rollups/hmac-sha1.js"></script>
-<script src="/bower_components/CryptoJS/build/rollups/tripledes.js"></script>
 
-<script src="/bower_components/jsrsasign/ext/rsa.js"></script>
-<script src="/bower_components/jsrsasign/ext/rsa2.js"></script>
-<script src="/bower_components/jsrsasign/ext/base64.js"></script>
-<script src="/bower_components/jsrsasign/rsapem-1.1.js"></script>
-<script src="/bower_components/jsrsasign/rsasign-1.2.js"></script>
-<script src="/bower_components/jsrsasign/asn1hex-1.1.js"></script>
-<script src="/bower_components/jsrsasign/x509-1.1.js"></script>
-<script src="/bower_components/jsrsasign/crypto-1.1.js"></script>
-
-<script src="/static/js/app.js"></script>
-<script src="/static/js/controllers.js"></script>
+<script src="/static/js/sensors.js"></script>
 <script src="/static/js/services.js"></script>
-<script src="/static/js/create.js"></script>
-<script src="/static/js/view.js"></script>
-<script src="/static/js/update.js"></script>
-<script src="/static/js/secondaryuse.js"></script>
 
 </head>
-<body data-ng-controller="NavCtrl">
-
-	<nav class="navbar navbar-default" role="navigation">
-		<div class="container-fluid">
-			<div class="navbar">
-				<ul class="nav navbar-nav">
-					<li data-ng-class="navClass('create')">
-						<a href='' data-ng-click="loadCreate()">Create</a>
-					</li>
-					<li data-ng-class="navClass('view')">
-						<a href='' data-ng-click="loadView()">View</a>
-					</li>
-					<li data-ng-class="navClass('update')">
-						<a href='' data-ng-click="loadUpdate()">Update</a>
-					</li>
-					<li data-ng-class="navClass('secondaryuse')">
-						<a href='' data-ng-click="loadSecondaryUse()">Secodary use</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<div data-ng-view></div>
-
-
-    <script type="text/ng-template" id="myModalContent.html">
-        <div class="modal-header">
-            <h3 class="modal-title">Welcome</h3>
-        </div>
-		<form ng-submit="submit()">
-            <div class="modal-body">
-            Please provide a PIN to secure your 'smart-card'.
-			!! Be aware if you forget the PIN you can not access your data anymore !!
-              <label>PIN</label>
-              <input type="text" ng-model="input.pin" />
-            </div>
-            <div class="modal-footer">
-                <input type="submit" class="btn primary-btn" value="Submit" />
-            </div>
-          </form>
-    </script>
-
+<body ng-controller="SensorCtrl">
+<div id='chartdiv'></div>
 </body>
 </html>
