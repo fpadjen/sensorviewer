@@ -7,3 +7,4 @@ Flask-SSLify
 Flask-RESTful
 jsonschema
 pep8
+requests
