@@ -33,7 +33,6 @@ controllers.controller('SensorCtrl', ['$scope', 'Point', '$http', function($scop
 	}
 
 	function make_request() {
-		console.log('executed')
 		var data = Point.query();
 		data.$promise.then(success)
 		setInterval(make_request, 60000)
