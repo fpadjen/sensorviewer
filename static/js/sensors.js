@@ -37,6 +37,7 @@ controllers.controller('SensorCtrl', ['$scope', 'Point', '$http', function($scop
 	function make_request() {
 		var data = Point.query();
 		data.$promise.then(success)
+		setInterval(make_request, 60000)
 	}
 
 	$.jqplot('chartdiv', $scope.chart, $scope.chartOptions);
