@@ -8,18 +8,36 @@ controllers.controller('SensorCtrl', ['$scope', 'Point', '$http', function($scop
 	$scope.chartOptions = {
 		sortData : true,
 		title : 'Sensor 1',
+		series:[{showMarker:false}],
 		axes : {
 			xaxis : {
-				renderer : $.jqplot.DateAxisRenderer,
-				tickRenderer: $.jqplot.CanvasAxisTickRenderer,
 				tickOptions : {
-					formatString : '%Y-%m-%d',
-					angle : 15,
-					fontSize : '10pt'
+					angle : -60
+				},
+				tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+				label : 'Datum',
+				labelRenderer : $.jqplot.CanvasAxisLabelRenderer,
+				labelOptions : {
+					FontFamily : 'Georgia, Serif',
+					fontSize : '16pt'
 				},
 			},
+			yaxis : {
+				tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+				tickOptions:{
+					labelPosition : 'right',
+					angle : -30
+				},
+				label : 'nassigkeit',
+				labelRenderer : $.jqplot.CanvasAxisLabelRenderer,
+				labelOptions : {
+					FontFamily : 'Georgia, Serif',
+					fontSize : '16pt',
+					angle : -90
+				},
+			}
 		}
-	}
+	};
 
 	function success(data, textStatus, jqXHR) {
 		var plotable = [[]]
