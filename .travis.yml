@@ -1,0 +1,13 @@
+language: python
+python:
+- '2.7'
+- '3.3'
+- pypy
+deploy:
+  provider: cloudcontrol
+  email: tooangel@tooangel.de
+  password:
+    secure: ffwWDBAgjurQ+lJooi0T3gh8tMQUIKaML5kTJtWIn8VAMKUVv1f/guvBlPfz1B5lBnk8o4I/wgU0rvtNIyOe3QaQxKYN4JRSvKhXXr2A9s8tys6cg77QGNW0dwc52LbDDGo5snZ/HX25xhmbTPekCTI09QScEyTtG3ExosVuDkQ=
+  deployment: sensors/default
+  on:
+    repo: TooAngel/sensorviewer
